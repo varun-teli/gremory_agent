@@ -1,6 +1,19 @@
-
+# config.py
 
 class Config:
     DEBUG = True
     HOST = "0.0.0.0"
     PORT = 5000
+
+    # LP CONFIG
+    BIN_WIDTH_PERCENT = 0.04
+    INITIAL_FUNDS = 1000.0
+    REBALANCE_FEE = 0.05
+    REBALANCE_INTERVAL = 3
+
+    # PRICE CONFIG
+    PRICE_MIN = 100.0
+    PRICE_MAX = 110.0
+    PRICE_DELTA = 2.0
+    USE_LIVE_PRICE_DEFAULT = True
+    LIVE_PRICE_API_URL = "https://api.jup.ag/price/v2?ids=So11111111111111111111111111111111111111112"

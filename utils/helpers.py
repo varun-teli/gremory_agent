@@ -1,18 +1,15 @@
+# utils/helpers.py
 
+def handle_input(data, engine):
+    action = data.get("action")
+    if not action:
+        return handle_input_error("Missing 'action'.")
 
+    kwargs = {k: v for k, v in data.items() if k != "action"}
+    return engine.run_action(action, **kwargs)
 
-
-def inputHandler(input):
-    """
-    It will check how is the input recieved and based on that, configure the agent to run.
-    for ex: whether it is a PROMPT, a command, anything else
-    """
-
-    return "True"
-
-
-def inputErrorHandler():
-    """
-    Returns error messages if input is not proper or any else issue is there.
-    
-    """
+def handle_input_error(message="Invalid input."):
+    return {
+        "error": True,
+        "message": message
+    }

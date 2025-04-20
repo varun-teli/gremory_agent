@@ -1,0 +1,13 @@
+{
+  "position_id": 1,
+  "funds_deployed": 1000.0,
+  "current_range": [
+    136.36,
+    141.92
+  ],
+  "last_price_seen": 139.1381,
+  "current_price": 139.1381,
+  "fees_earned": 0.0,
+  "total_rebalances": 0,
+  "rebalance_history": []
+}
